@@ -2,8 +2,8 @@
   <img src="assets/cover.jpg" alt="Cover Photo" width="100%">
 </p>
 
-<p align="center">
-  <img src="assets/Profile.jpg" alt="Jison Joseph Sebastian" width="160" style="border-radius: 50%; border: 3px solid #fff;">
+<p align="left">
+  <img src="assets/Profile.jpg" alt="Jison Joseph Sebastian" width="130" style="border-radius: 50%; border: 2px solid #fff; margin-top: -80px; margin-left: 10px;">
 </p>
 
 # 💫 About Me:
