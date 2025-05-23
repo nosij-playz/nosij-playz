@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/profile.jpg" alt="Jison Joseph Sebastian" width="160" style="border-radius: 50%; border: 3px solid #fff;">
+  <img src="assets/Profile.jpg" alt="Jison Joseph Sebastian" width="160" style="border-radius: 50%; border: 3px solid #fff;">
 </p>
 
 # 💫 About Me:
