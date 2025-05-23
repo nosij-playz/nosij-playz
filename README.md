@@ -7,7 +7,7 @@
       <h1 style="margin: 0; font-size: 26px; background: linear-gradient(to right, #00c6ff, #0072ff); -webkit-background-clip: text; color: transparent;">
         Jison Joseph Sebastian
       </h1>
-      <p style="margin: 5px 0 0 0; font-size: 16px; color: #ccc;">AI Developer | Full Stack Engineer | Innovator</p>
+      <p style="margin: 5px 0 0 0; font-size: 16px; color: #ccc;">Python Developer | Full Stack Engineer |Machine Learning Enthusiast|</p>
     </td>
   </tr>
 </table>
