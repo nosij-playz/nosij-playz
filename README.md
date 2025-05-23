@@ -1,11 +1,13 @@
-<p align="center">
-  <img src="assets/cover.jpg" alt="Cover Photo" width="100%">
-</p>
-
-<p align="left">
-  <img src="assets/Profile.jpg" alt="Jison Joseph Sebastian" width="130" style="border-radius: 50%; border: 2px solid #fff; margin-top: -80px; margin-left: 10px;">
-</p>
-
+<table>
+  <tr>
+    <td>
+      <img src="assets/Profile.jpg" alt="Jison Joseph Sebastian" width="130" height="130" style="border-radius: 50%;">
+    </td>
+    <td style="vertical-align: middle; padding-left: 15px;">
+      <h2 style="margin: 0;">Jison Joseph Sebastian</h2>
+    </td>
+  </tr>
+</table>
 # 💫 About Me:
 👋 Hello I'm Jison Joseph Sebastian, a dedicated student at Vimal Jyothi Engineering College pursuing a B.Tech in computer science. I love creating projects that address pressing issues in the real world, and my areas of expertise are artificial intelligence and machine learning. I'm constantly eager to learn and create, whether it's creating full-stack applications with Flask, Python, and JavaScript or creating clever solutions like Medi AI, CureCart, and NeuroSentinel. I'm currently investigating cybersecurity powered by AI and honing my skills through open-source collaboration and internships. Together, let's connect and create something meaningful!
 
