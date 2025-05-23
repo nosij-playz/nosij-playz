@@ -1,10 +1,13 @@
 <table>
   <tr>
     <td>
-      <img src="assets/Profile.jpg" alt="Jison Joseph Sebastian" width="130" height="130" style="border-radius: 50%;">
+      <img src="assets/Profile.jpg" alt="Jison Joseph Sebastian" width="140" height="140" style="border-radius: 50%; border: 4px solid #4CAF50; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
     </td>
-    <td style="vertical-align: middle; padding-left: 15px;">
-      <h2 style="margin: 0;">Jison Joseph Sebastian</h2>
+    <td style="padding-left: 20px; vertical-align: middle;">
+      <h1 style="margin: 0; font-size: 26px; background: linear-gradient(to right, #00c6ff, #0072ff); -webkit-background-clip: text; color: transparent;">
+        Jison Joseph Sebastian
+      </h1>
+      <p style="margin: 5px 0 0 0; font-size: 16px; color: #ccc;">AI Developer | Full Stack Engineer | Innovator</p>
     </td>
   </tr>
 </table>
