@@ -239,16 +239,6 @@ Some of my most impactful AI, machine learning, and software engineering project
 
 ---
 
-## 👀 Profile Views
-
-Thanks for visiting my profile!
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=nosij-playz&color=C9A96E&style=flat-square" />
-</p>
-
----
-
 <p align="center">
   <i>“Great developers don't just write code — they write solutions that change lives.”</i>
 </p>
