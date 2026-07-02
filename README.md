@@ -188,11 +188,22 @@ I'm a **final-year B.Tech Computer Science** student at **Vimal Jyothi Engineeri
 
 ---
 
-## 🔝 Top Contributed Repo
+## 🔝 Featured Repositories
 
-<p align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=nosij-playz&limit=5&theme=dark&combine_all_yearly_contributions=true&bg_color=0d1117&title_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
-</p>
+<div align="center">
+  <a href="https://github.com/nosij-playz/Retrace-Ai">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=Retrace-Ai&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
+  </a>
+  <a href="https://github.com/nosij-playz/MediAi-chatbot">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=MediAi-chatbot&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
+  </a>
+  <a href="https://github.com/nosij-playz/Curecart">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=Curecart&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
+  </a>
+  <a href="https://github.com/nosij-playz/MailSense">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=MailSense&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
+  </a>
+</div>
 
 ---
 
@@ -201,7 +212,6 @@ I'm a **final-year B.Tech Computer Science** student at **Vimal Jyothi Engineeri
 <p align="center">
   <img src="https://visitcount.itsvg.in/api?id=nosij-playz&icon=0&color=0" />
 </p>
-
 ---
 
 <p align="center">
