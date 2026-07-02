@@ -46,9 +46,9 @@ I'm a **final-year B.Tech Computer Science** student at **Vimal Jyothi Engineeri
 ## 🌐 Connect With Me
 
 <p align="center">
-  <a href="www.jisonjosephsebastian.work.gd" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=About.me&logoColor=white" />
-  </a>
+<a href="https://www.jisonjosephsebastian.work.gd/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio" />
+</a>
   <a href="https://linkedin.com/in/nosij-playz44" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
