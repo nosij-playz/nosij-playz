@@ -192,52 +192,6 @@ Recognition of my contributions and milestones across GitHub.
 
 ---
 
-## 🚀 Featured Projects
-
-Some of my most impactful AI, machine learning, and software engineering projects.
-
-<div align="center">
-  <table>
-    <tr>
-      <td width="50%">
-        <a href="https://github.com/nosij-playz/Retrace-Ai">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=Retrace-Ai&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
-        </a>
-      </td>
-      <td width="50%">
-        <a href="https://github.com/nosij-playz/MediAi-chatbot">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=MediAi-chatbot&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%">
-        <a href="https://github.com/nosij-playz/Curecart">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=Curecart&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
-        </a>
-      </td>
-      <td width="50%">
-        <a href="https://github.com/nosij-playz/MailSense">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=MailSense&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%">
-        <a href="https://github.com/nosij-playz">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=NeuroSentinel&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
-        </a>
-      </td>
-      <td width="50%">
-        <a href="https://github.com/nosij-playz">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=FraudShield&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
-
----
 
 <p align="center">
   <i>“Great developers don't just write code — they write solutions that change lives.”</i>
