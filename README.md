@@ -167,20 +167,19 @@ I'm a **final-year B.Tech Computer Science** student at **Vimal Jyothi Engineeri
 
 ---
 
-## 📊 GitHub Statistics
+## 📚 Research Interests
 
-A quick overview of my open-source activity, programming languages, and contribution consistency.
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nosij-playz&theme=dark&hide_border=false&include_all_commits=false&count_private=false&show_icons=true&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="49%" />
-  <img src="https://nirzak-streak-stats.vercel.app/?user=nosij-playz&theme=dark&hide_border=false&background=0d1117&stroke=1a1a2e&ring=C9A96E&fire=C9A96E&currStreakNum=FFFFFF&sideNums=9CA3AF&currStreakLabel=C9A96E&sideLabels=9CA3AF&dates=6B7280" width="49%" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nosij-playz&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact&bg_color=0d1117&title_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="50%" />
-</div>
+- 🤖 Artificial Intelligence
+- 🧠 Machine Learning
+- 👁️ Computer Vision
+- 💬 Large Language Models (LLMs)
+- 🤖 Agentic AI Systems
+- 🛡️ AI Security
+- 🌍 Environmental Intelligence
+- ☁️ MLOps & Cloud AI
 
 ---
+
 
 ## 🏆 GitHub Achievements
 
