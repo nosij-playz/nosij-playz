@@ -167,7 +167,9 @@ I'm a **final-year B.Tech Computer Science** student at **Vimal Jyothi Engineeri
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Statistics
+
+A quick overview of my open-source activity, programming languages, and contribution consistency.
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=nosij-playz&theme=dark&hide_border=false&include_all_commits=false&count_private=false&show_icons=true&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="49%" />
@@ -180,38 +182,71 @@ I'm a **final-year B.Tech Computer Science** student at **Vimal Jyothi Engineeri
 
 ---
 
-## 🏆 GitHub Trophies
+## 🏆 GitHub Achievements
+
+Recognition of my contributions and milestones across GitHub.
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=nosij-playz&theme=radical&no-frame=true&no-bg=false&margin-w=8&row=2&column=4" />
+  <img src="https://github-profile-trophy.vercel.app/?username=nosij-playz&theme=darkhub&no-frame=true&no-bg=false&margin-w=8&row=2&column=4" />
 </p>
 
 ---
 
-## 🔝 Featured Repositories
+## 🚀 Featured Projects
+
+Some of my most impactful AI, machine learning, and software engineering projects.
 
 <div align="center">
-  <a href="https://github.com/nosij-playz/Retrace-Ai">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=Retrace-Ai&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
-  </a>
-  <a href="https://github.com/nosij-playz/MediAi-chatbot">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=MediAi-chatbot&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
-  </a>
-  <a href="https://github.com/nosij-playz/Curecart">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=Curecart&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
-  </a>
-  <a href="https://github.com/nosij-playz/MailSense">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=MailSense&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" />
-  </a>
+  <table>
+    <tr>
+      <td width="50%">
+        <a href="https://github.com/nosij-playz/Retrace-Ai">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=Retrace-Ai&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
+        </a>
+      </td>
+      <td width="50%">
+        <a href="https://github.com/nosij-playz/MediAi-chatbot">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=MediAi-chatbot&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <a href="https://github.com/nosij-playz/Curecart">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=Curecart&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
+        </a>
+      </td>
+      <td width="50%">
+        <a href="https://github.com/nosij-playz/MailSense">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=MailSense&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <a href="https://github.com/nosij-playz">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=NeuroSentinel&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
+        </a>
+      </td>
+      <td width="50%">
+        <a href="https://github.com/nosij-playz">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=nosij-playz&repo=FraudShield&theme=dark&bg_color=0d1117&title_color=C9A96E&icon_color=C9A96E&text_color=9CA3AF&border_color=1a1a2e" width="100%" />
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
 
-## 👀 Visitor Count
+## 👀 Profile Views
+
+Thanks for visiting my profile!
 
 <p align="center">
-  <img src="https://visitcount.itsvg.in/api?id=nosij-playz&icon=0&color=0" />
+  <img src="https://komarev.com/ghpvc/?username=nosij-playz&color=C9A96E&style=flat-square" />
 </p>
+
 ---
 
 <p align="center">
