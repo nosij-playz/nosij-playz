@@ -46,7 +46,7 @@ I'm a **final-year B.Tech Computer Science** student at **Vimal Jyothi Engineeri
 ## 🌐 Connect With Me
 
 <p align="center">
-  <a href="https://myporfolio-1o1h.onrender.com/" target="_blank">
+  <a href="www.jisonjosephsebastian.work.gd" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=About.me&logoColor=white" />
   </a>
   <a href="https://linkedin.com/in/nosij-playz44" target="_blank">
@@ -180,17 +180,15 @@ I'm a **final-year B.Tech Computer Science** student at **Vimal Jyothi Engineeri
 
 ---
 
+## 🔥 GitHub Streak
 
-## 🏆 GitHub Achievements
-
-Recognition of my contributions and milestones across GitHub.
+A snapshot of my coding consistency and continuous development journey.
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=nosij-playz&theme=darkhub&no-frame=true&no-bg=false&margin-w=8&row=2&column=4" />
+  <img src="https://streak-stats.demolab.com?user=nosij-playz&theme=dark&background=0d1117&stroke=1a1a2e&ring=C9A96E&fire=C9A96E&currStreakNum=FFFFFF&sideNums=9CA3AF&currStreakLabel=C9A96E&sideLabels=9CA3AF&dates=6B7280&hide_border=false" />
 </p>
 
 ---
-
 
 <p align="center">
   <i>“Great developers don't just write code — they write solutions that change lives.”</i>
