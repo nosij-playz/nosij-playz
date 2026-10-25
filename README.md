@@ -27,13 +27,13 @@
   <img src="./assets/headers/about.png" alt="Core Focus & Background" width="100%" />
 </p>
 
-Computer Science graduate from **Vimal Jyothi Engineering College**, working across machine learning, computer vision, LLM workflows, and modern web applications.
+Computer Science graduate from **Vimal Jyothi Engineering College**, specializing in **Applied Machine Learning**, **Computer Vision**, and **Autonomous Agentic Workflows**.
 
-My work bridges research-grade model development with production software: scalable pipelines, responsive user experiences, and deployment-ready workflows.
+My engineering bridges **research-grade model architectures** with **scalable production systems**: robust data pipelines, low-latency APIs, and deployment-ready software.
 
-- 🧠 **Applied AI & Computer Vision** — Deep learning, CNN architectures, cross-age facial verification, and climate intelligence.
-- ⚡ **LLM Systems & Agent Workflows** — Autonomous workflows, retrieval-augmented generation (RAG), tool use, and evaluation pipelines.
-- 🛠️ **Full-Stack Engineering** — Resilient microservices, REST APIs, real-time WebSockets, and modern web applications.
+- 🧠 **Applied AI & Computer Vision** — Engineering **deep learning backbones**, **CNN architectures**, **cross-age biometric verification**, and **climate-aware predictive models**.
+- ⚡ **LLM Systems & Agent Workflows** — Developing **autonomous multi-agent pipelines**, **Retrieval-Augmented Generation (RAG)**, tool use, and **LLM evaluation benchmarks**.
+- 🛠️ **Full-Stack Engineering** — Architecting **resilient microservices**, **high-throughput REST APIs**, **real-time WebSockets**, and modern web applications.
 
 ---
 
@@ -48,13 +48,12 @@ My work bridges research-grade model development with production software: scala
     <td width="50%" valign="top">
       <div align="left">
         <a href="https://jisonsebastian.vercel.app/#projects">
-          <img src="https://img.shields.io/badge/01%20·%20AWARD%20WINNER-D6B56D?style=for-the-badge&labelColor=14181E" alt="01 Award Winner" />
+          <img src="./assets/projects/neurowave.png" alt="01 · NeuroWave (CAIRS)" width="100%" />
         </a>
         <br/><br/>
-        <h3><a href="https://jisonsebastian.vercel.app/#projects">NeuroWave (CAIRS)</a></h3>
         <p><b>Climate-Aware Intelligent Radio System</b><br/>
-        <sub>🏆 <i>Winner of Best Project Award at SRISHTI 2026</i></sub></p>
-        <p>Telemetry & deep learning architecture designed to dynamically adjust radio transmission frequencies and modulation based on real-time environmental atmospheric degradation.</p>
+        <sub>🏆 <b><i>Winner of Best Project Award at SRISHTI 2026</i></b></sub></p>
+        <p>An intelligent telemetry & deep learning architecture designed to <b>dynamically adapt radio transmission frequencies and modulation</b> in response to real-time <b>environmental atmospheric degradation</b> and severe weather telemetry.</p>
         <p>
           <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
           <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
@@ -62,7 +61,7 @@ My work bridges research-grade model development with production software: scala
         </p>
         <p>
           <a href="https://jisonsebastian.vercel.app/#projects">
-            <img src="https://img.shields.io/badge/Case%20Study-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Case Study" />
+            <img src="https://img.shields.io/badge/Explore%20Case%20Study-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Case Study" />
           </a>
         </p>
       </div>
@@ -71,13 +70,12 @@ My work bridges research-grade model development with production software: scala
     <td width="50%" valign="top">
       <div align="left">
         <a href="https://github.com/nosij-playz/Sustain_AI">
-          <img src="https://img.shields.io/badge/02%20·%20AGENTIC%20AI-D6B56D?style=for-the-badge&labelColor=14181E" alt="02 Agentic AI" />
+          <img src="./assets/projects/sustain-ai.png" alt="02 · Sustain_AI" width="100%" />
         </a>
         <br/><br/>
-        <h3><a href="https://github.com/nosij-playz/Sustain_AI">Sustain_AI</a></h3>
-        <p><b>Environmental Analysis & Agentic Workflows</b><br/>
-        <sub>🌱 <i>Multi-Agent Intelligence & Computer Vision</i></sub></p>
-        <p>Autonomous environmental platform combining vision classifiers and agentic LLM reasoning pipelines to process telemetry data and formulate actionable sustainability audits.</p>
+        <p><b>Environmental Analysis & Multi-Agent Intelligence</b><br/>
+        <sub>🌱 <i>Autonomous Climate Intelligence & Vision Audits</i></sub></p>
+        <p>An autonomous intelligence platform combining <b>computer vision classifiers</b> with <b>agentic LLM reasoning pipelines</b> to process raw sensor feeds and formulate <b>actionable sustainability audit reports</b>.</p>
         <p>
           <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
           <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
@@ -89,7 +87,7 @@ My work bridges research-grade model development with production software: scala
           </a>
           &nbsp;
           <a href="https://jisonsebastian.vercel.app/#projects">
-            <img src="https://img.shields.io/badge/Overview-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Overview" />
+            <img src="https://img.shields.io/badge/Overview-10B981?style=flat-square&logo=safari&logoColor=white" alt="Overview" />
           </a>
         </p>
       </div>
@@ -100,17 +98,16 @@ My work bridges research-grade model development with production software: scala
     <td width="50%" valign="top">
       <div align="left">
         <a href="https://github.com/nosij-playz/Retrace-Ai">
-          <img src="https://img.shields.io/badge/03%20·%20COMPUTER%20VISION-D6B56D?style=for-the-badge&labelColor=14181E" alt="03 Computer Vision" />
+          <img src="./assets/projects/retrace-ai.png" alt="03 · Retrace AI" width="100%" />
         </a>
         <br/><br/>
-        <h3><a href="https://github.com/nosij-playz/Retrace-Ai">Retrace AI</a></h3>
-        <p><b>Age-Invariant Facial Recognition</b><br/>
-        <sub>🔍 <i>Deep Learning Feature Isolation</i></sub></p>
-        <p>Deep convolutional network engineered to overcome cross-age biometric degradation by isolating age-invariant facial landmarks and high-order latent features.</p>
+        <p><b>Age-Invariant Facial Recognition & Verification</b><br/>
+        <sub>🔍 <i>Deep Learning Latent Feature Isolation</i></sub></p>
+        <p>A biometric deep learning pipeline engineered to overcome <b>cross-age facial verification degradation</b> by isolating <b>age-invariant facial landmarks</b> and high-order latent features via <b>custom CNN backbones</b>.</p>
         <p>
           <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
           <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" />
-          <img src="https://img.shields.io/badge/CNNs-14181E?style=flat-square&logoColor=D6B56D" />
+          <img src="https://img.shields.io/badge/CNNs-14181E?style=flat-square&logoColor=38BDF8" />
         </p>
         <p>
           <a href="https://github.com/nosij-playz/Retrace-Ai">
@@ -118,7 +115,7 @@ My work bridges research-grade model development with production software: scala
           </a>
           &nbsp;
           <a href="https://jisonsebastian.vercel.app/#projects">
-            <img src="https://img.shields.io/badge/Overview-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Overview" />
+            <img src="https://img.shields.io/badge/Overview-38BDF8?style=flat-square&logo=safari&logoColor=0B0D10" alt="Overview" />
           </a>
         </p>
       </div>
@@ -127,13 +124,12 @@ My work bridges research-grade model development with production software: scala
     <td width="50%" valign="top">
       <div align="left">
         <a href="https://github.com/nosij-playz/Curecart">
-          <img src="https://img.shields.io/badge/04%20·%20FULL%20STACK-D6B56D?style=for-the-badge&labelColor=14181E" alt="04 Full Stack" />
+          <img src="./assets/projects/curecart.png" alt="04 · CureCart" width="100%" />
         </a>
         <br/><br/>
-        <h3><a href="https://github.com/nosij-playz/Curecart">CureCart</a></h3>
-        <p><b>Medical Inventory & Ordering System</b><br/>
-        <sub>💊 <i>Full-Stack Healthcare Web App</i></sub></p>
-        <p>End-to-end pharmacy management platform featuring live inventory tracking, automatic prescription ledger reconciliation, and secure medicine purchasing checkout.</p>
+        <p><b>Medical Inventory & Ordering Management System</b><br/>
+        <sub>💊 <i>Full-Stack Healthcare Web Application</i></sub></p>
+        <p>An end-to-end pharmaceutical management platform featuring <b>real-time inventory stock telemetry</b>, <b>automated prescription ledger audits</b>, and <b>secure medicine purchasing checkout workflows</b>.</p>
         <p>
           <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
           <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
@@ -145,7 +141,7 @@ My work bridges research-grade model development with production software: scala
           </a>
           &nbsp;
           <a href="https://jisonsebastian.vercel.app/#projects">
-            <img src="https://img.shields.io/badge/Overview-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Overview" />
+            <img src="https://img.shields.io/badge/Overview-FB7185?style=flat-square&logo=safari&logoColor=0B0D10" alt="Overview" />
           </a>
         </p>
       </div>
@@ -163,12 +159,12 @@ My work bridges research-grade model development with production software: scala
   <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,opencv,scikitlearn,fastapi,flask,react,nodejs,tailwind,postgres,mysql,mongodb,docker,git,linux&theme=dark&perline=8" alt="Tech Stack Icons" />
 </p>
 
-| Domain | Technologies & Tools |
+| Domain | Core Technologies & Tooling |
 | :--- | :--- |
-| **Artificial Intelligence** | Python, PyTorch, TensorFlow, scikit-learn, OpenCV, NumPy, Pandas |
-| **LLMs & Agentic AI** | LangChain, Retrieval-Augmented Generation (RAG), Prompt Engineering, Tool Use |
-| **Web & API Engineering** | React, Node.js, Express, Flask, FastAPI, RESTful APIs, WebSockets |
-| **Databases & DevOps** | PostgreSQL, MySQL, SQLite, MongoDB, Docker, Git, GitHub Actions, Linux |
+| **Artificial Intelligence & Vision** | **Python**, **PyTorch**, **TensorFlow**, **OpenCV**, **scikit-learn**, NumPy, Pandas |
+| **LLMs & Agentic Systems** | **LangChain**, **RAG Pipelines**, **Autonomous Agents**, **Prompt Engineering**, Tool Use |
+| **Web & API Engineering** | **React**, **Node.js**, **Express**, **FastAPI**, **Flask**, RESTful APIs, WebSockets |
+| **Databases & DevOps** | **PostgreSQL**, **MySQL**, **SQLite**, **MongoDB**, **Docker**, **Git**, GitHub Actions, Linux |
 
 ---
 
@@ -205,13 +201,13 @@ My work bridges research-grade model development with production software: scala
 </p>
 
 - 🏆 **Best Project Award — SRISHTI 2026**  
-  National Level Technical Project Exhibition for *NeuroWave (CAIRS)*
+  *Winner of First Place Award* at the National Level Technical Project Exhibition for **NeuroWave (CAIRS)**
 - 🎓 **GATE 2026 Qualified**  
-  Graduate Aptitude Test in Engineering in Computer Science & Information Technology (CS & IT)
+  *Graduate Aptitude Test in Engineering* in **Computer Science & Information Technology (CS & IT)**
 - 💼 **4 Technical Internships**  
-  Hands-on industry experience covering Machine Learning, Full-Stack Engineering, and Data Science
-- 🚀 **15+ Completed Projects**  
-  Spanning agentic systems, computer vision research, and production web tools
+  Hands-on industry experience covering **Machine Learning**, **Full-Stack Engineering**, and **Data Science**
+- 🚀 **15+ Shipped Projects**  
+  Spanning **agentic workflows**, **computer vision research**, and **production web tools**
 
 ---
 
@@ -221,7 +217,7 @@ My work bridges research-grade model development with production software: scala
 
 <p align="center">
   <h3>Let’s build something impactful together.</h3>
-  <p>I am actively open to AI/ML Engineering, Agentic AI, and Full-Stack Developer opportunities.</p>
+  <p>I am actively open to <b>AI/ML Engineering</b>, <b>Agentic AI</b>, and <b>Full-Stack Developer</b> opportunities.</p>
   <a href="https://jisonsebastian.vercel.app/#contact">
     <img src="https://img.shields.io/badge/Get_In_Touch-D6B56D?style=for-the-badge&logo=mailgun&logoColor=0B0D10" alt="Get In Touch" />
   </a>
