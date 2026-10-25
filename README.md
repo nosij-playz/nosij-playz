@@ -1,9 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.gif">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.gif">
-    <img src="./assets/profile-banner.gif" alt="Jison Joseph Sebastian — AI/ML and Full-Stack Developer" width="100%">
-  </picture>
+  <img src="./assets/profile-banner.gif" alt="Jison Joseph Sebastian — AI/ML and Full-Stack Developer" width="100%">
 </p>
 
 <div align="center">
