@@ -24,7 +24,7 @@
 ---
 
 <p align="left">
-  <img src="./assets/headers/about.svg" alt="Core Focus & Background" width="100%" />
+  <img src="./assets/headers/about.png" alt="Core Focus & Background" width="100%" />
 </p>
 
 Computer Science graduate from **Vimal Jyothi Engineering College**, working across machine learning, computer vision, LLM workflows, and modern web applications.
@@ -38,7 +38,7 @@ My work bridges research-grade model development with production software: scala
 ---
 
 <p align="left">
-  <img src="./assets/headers/selected-works.svg" alt="Selected Works & Systems" width="100%" />
+  <img src="./assets/headers/selected-works.png" alt="Selected Works & Systems" width="100%" />
 </p>
 
 <!-- 2x2 Project Showcase Grid -->
@@ -156,7 +156,7 @@ My work bridges research-grade model development with production software: scala
 ---
 
 <p align="left">
-  <img src="./assets/headers/technical-toolkit.svg" alt="Technical Toolkit & Skills" width="100%" />
+  <img src="./assets/headers/technical-toolkit.png" alt="Technical Toolkit & Skills" width="100%" />
 </p>
 
 <p align="center">
@@ -173,7 +173,7 @@ My work bridges research-grade model development with production software: scala
 ---
 
 <p align="left">
-  <img src="./assets/headers/github-analytics.svg" alt="GitHub Analytics & Activity" width="100%" />
+  <img src="./assets/headers/github-analytics.png" alt="GitHub Analytics & Activity" width="100%" />
 </p>
 
 <p align="center">
@@ -201,7 +201,7 @@ My work bridges research-grade model development with production software: scala
 ---
 
 <p align="left">
-  <img src="./assets/headers/recognition.svg" alt="Honors & Recognition" width="100%" />
+  <img src="./assets/headers/recognition.png" alt="Honors & Recognition" width="100%" />
 </p>
 
 - 🏆 **Best Project Award — SRISHTI 2026**  
@@ -216,7 +216,7 @@ My work bridges research-grade model development with production software: scala
 ---
 
 <p align="left">
-  <img src="./assets/headers/connect.svg" alt="Collaborate & Connect" width="100%" />
+  <img src="./assets/headers/connect.png" alt="Collaborate & Connect" width="100%" />
 </p>
 
 <p align="center">
