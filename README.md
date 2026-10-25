@@ -4,7 +4,7 @@
 
 # Jison Joseph Sebastian
 
-**AI/ML Engineer · Agentic AI Developer · Full-Stack Developer**  
+**AI/ML Engineer · Agentic AI · Full-Stack Development**  
 Kannur, Kerala, India
 
 [Portfolio](https://jisonsebastian.vercel.app/) ·
@@ -14,66 +14,98 @@ Kannur, Kerala, India
 
 ---
 
-## About
+## I build practical software with AI at its core.
 
-Computer Science graduate from Vimal Jyothi Engineering College focused on
-machine learning, computer vision, and full-stack software development.
-I build practical applications that connect AI techniques with useful software.
+Computer Science graduate from Vimal Jyothi Engineering College, working across
+machine learning, computer vision, LLM workflows, and web applications.
 
-**Current focus:** Applied AI and computer vision · LLM and RAG workflows ·
-Web applications and APIs
+My projects combine model development with the software around it: data
+pipelines, APIs, interfaces, and deployment-ready workflows.
 
-## Featured Projects
+### Areas of work
 
-### NeuroWave (CAIRS)
-
-Climate-aware intelligent radio system combining environmental sensing with
-AI-driven recommendations. Co-developed with a team; awarded Best Project at
-SRISHTI 2026.
-
-**Technologies:** Python · TensorFlow · Environmental sensing  
-[Project overview](https://jisonsebastian.vercel.app/#projects)
-
-### Sustain_AI
-
-Environmental analysis platform exploring agentic workflows, computer vision,
-and sustainability insights.
-
-**Technologies:** Python · LLMs · Computer vision · Flask  
-[Repository](https://github.com/nosij-playz/Sustain_AI) ·
-[Portfolio overview](https://jisonsebastian.vercel.app/#projects)
-
-### Retrace AI
-
-Deep-learning project exploring cross-age facial verification and
-age-invariant face recognition.
-
-**Technologies:** PyTorch · OpenCV · CNNs  
-[Repository](https://github.com/nosij-playz/Retrace-Ai) ·
-[Portfolio overview](https://jisonsebastian.vercel.app/#projects)
-
-### CureCart
-
-Web application for medicine ordering and inventory management.
-
-**Technologies:** Python · Flask · JavaScript · SQLite  
-[Repository](https://github.com/nosij-playz/Curecart) ·
-[Portfolio overview](https://jisonsebastian.vercel.app/#projects)
-
-## Technical Focus
-
-- **AI and machine learning:** Python, PyTorch, TensorFlow, scikit-learn
-- **LLMs:** LangChain, RAG, prompt engineering, agent workflows
-- **Web development:** React, Node.js, Flask, FastAPI, REST APIs
-- **Data and tools:** Pandas, NumPy, SQL, Git, Docker
-
-## Recognition
-
-- **Best Project Award**, SRISHTI 2026 — NeuroWave (CAIRS)
-- **GATE 2026 qualified**, Computer Science and Information Technology
-- **Four internships** across machine learning, full-stack development, and data science
+**Applied AI** — machine learning and computer vision  
+**LLM systems** — retrieval, tool use, and agent workflows  
+**Software engineering** — web applications, APIs, and real-time systems
 
 ---
 
-Open to software engineering and AI/ML opportunities.  
-[Get in touch through my portfolio](https://jisonsebastian.vercel.app/#contact)
+## Selected work
+
+### 01 — NeuroWave (CAIRS)
+**Climate-aware intelligent radio system**
+
+A team-built system that combines environmental sensing with AI-driven radio
+recommendations. Recognized with the Best Project Award at SRISHTI 2026.
+
+**Built with** · Python · TensorFlow · Environmental sensing  
+[Project overview](https://jisonsebastian.vercel.app/#projects)
+
+### 02 — Sustain_AI
+**Environmental analysis with agentic AI**
+
+An environmental analysis platform exploring agent workflows, computer vision,
+and sustainability insights.
+
+**Built with** · Python · Flask · LLMs · Computer vision  
+[Source code](https://github.com/nosij-playz/Sustain_AI) ·
+[Portfolio overview](https://jisonsebastian.vercel.app/#projects)
+
+### 03 — Retrace AI
+**Age-invariant facial recognition**
+
+A deep-learning project exploring cross-age facial verification and
+age-invariant face recognition.
+
+**Built with** · PyTorch · OpenCV · CNNs  
+[Source code](https://github.com/nosij-playz/Retrace-Ai) ·
+[Portfolio overview](https://jisonsebastian.vercel.app/#projects)
+
+### 04 — CureCart
+**Medicine ordering and inventory management**
+
+A web application for medicine ordering and medical inventory management.
+
+**Built with** · Python · Flask · JavaScript · SQLite  
+[Source code](https://github.com/nosij-playz/Curecart) ·
+[Portfolio overview](https://jisonsebastian.vercel.app/#projects)
+
+---
+
+## Technical toolkit
+
+**AI / ML**  
+Python · PyTorch · TensorFlow · scikit-learn · OpenCV · NumPy · Pandas
+
+**LLM applications**  
+LangChain · Retrieval-augmented generation · Prompt engineering · Agent workflows
+
+**Web and APIs**  
+React · Node.js · Flask · FastAPI · REST APIs · WebSockets
+
+**Data and infrastructure**  
+PostgreSQL · MySQL · SQLite · MongoDB · Git · Docker · Linux
+
+---
+
+## Recognition
+
+**SRISHTI 2026** — Best Project Award for NeuroWave (CAIRS)  
+**GATE 2026** — Qualified in Computer Science & Information Technology  
+**Industry experience** — Four internships across machine learning,
+full-stack development, and data science
+
+---
+
+### Let’s build something useful.
+
+Open to software engineering and AI/ML opportunities.
+
+[Explore my portfolio](https://jisonsebastian.vercel.app/) ·
+[Get in touch](https://jisonsebastian.vercel.app/#contact)
+
+Open to software engineering and AI/ML opportunities.
+
+[Explore my portfolio](https://jisonsebastian.vercel.app/) ·
+[Get in touch](https://jisonsebastian.vercel.app/#contact)
+
