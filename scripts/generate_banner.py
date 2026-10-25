@@ -3,46 +3,51 @@ import os
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-WIDTH = 1000
-HEIGHT = 280
+WIDTH = 1100
+HEIGHT = 320
 NUM_FRAMES = 36
 FPS = 16
 
 FONT_DIR = r"C:\Windows\Fonts"
-FONT_TITLE = ImageFont.truetype(os.path.join(FONT_DIR, "segoeuib.ttf"), 44)
-FONT_SUBTITLE = ImageFont.truetype(os.path.join(FONT_DIR, "segoeui.ttf"), 16)
+FONT_TITLE = ImageFont.truetype(os.path.join(FONT_DIR, "segoeuib.ttf"), 46)
+FONT_SUBTITLE = ImageFont.truetype(os.path.join(FONT_DIR, "segoeui.ttf"), 17)
 FONT_BADGE = ImageFont.truetype(os.path.join(FONT_DIR, "consola.ttf"), 11)
-FONT_META = ImageFont.truetype(os.path.join(FONT_DIR, "segoeui.ttf"), 12)
 
-# Colors
-COLOR_GOLD = (201, 169, 110)
-COLOR_GOLD_LIGHT = (245, 230, 200)
-COLOR_CYAN = (56, 189, 248)
+# Load portrait
+portrait_src = Image.open("assets/jison-portrait.png").convert("RGBA")
+scale = 295.0 / portrait_src.height
+pw = int(portrait_src.width * scale)
+ph = 295
+portrait_scaled = portrait_src.resize((pw, ph), Image.Resampling.LANCZOS)
+
+# Create soft fade at the bottom of portrait so it blends seamlessly into the navy floor
+orig_a = portrait_scaled.split()[3]
+comb_a = Image.new("L", (pw, ph))
+comb_a.paste(orig_a)
+for y in range(ph - 45, ph):
+    factor = 1.0 - (y - (ph - 45)) / 45.0
+    for x in range(pw):
+        v = int(comb_a.getpixel((x, y)) * factor)
+        comb_a.putpixel((x, y), v)
+portrait_scaled.putalpha(comb_a)
 
 np.random.seed(137)
-NUM_NODES = 26
+NUM_NODES = 24
 node_bases = []
 for i in range(NUM_NODES):
-    # Keep center clean: clusters on left and right wings
-    if i < 12:
-        bx = np.random.uniform(35, 250)
-    elif i < 24:
-        bx = np.random.uniform(750, 965)
+    # Cluster on right wing and perimeter
+    if i < 18:
+        bx = np.random.uniform(430, WIDTH - 50)
     else:
-        # A couple at the very top or bottom edge only
-        bx = np.random.uniform(250, 750)
+        bx = np.random.uniform(340, 480)
         
-    if i >= 24:
-        by = np.random.choice([np.random.uniform(18, 38), np.random.uniform(HEIGHT - 45, HEIGHT - 20)])
-    else:
-        by = np.random.uniform(30, HEIGHT - 30)
-        
-    rx = np.random.uniform(6, 15)
+    by = np.random.uniform(35, HEIGHT - 35)
+    rx = np.random.uniform(6, 14)
     ry = np.random.uniform(5, 12)
     phase = np.random.uniform(0, 2 * math.pi)
     speed = np.random.choice([1, 2])
-    color_type = np.random.choice(["cyan", "gold", "cyan_dim"], p=[0.45, 0.40, 0.15])
-    size = np.random.uniform(1.8, 2.8)
+    color_type = np.random.choice(["cyan", "gold", "cyan_dim"], p=[0.5, 0.35, 0.15])
+    size = np.random.uniform(1.8, 2.6)
     node_bases.append({
         "bx": bx, "by": by, "rx": rx, "ry": ry,
         "phase": phase, "speed": speed, "color_type": color_type, "size": size
@@ -54,13 +59,12 @@ def create_smooth_gradient_bg():
     
     dx = (x_coords - cx) / (WIDTH / 2)
     dy = (y_coords - cy) / (HEIGHT / 2)
-    dist = np.sqrt(dx**2 * 0.7 + dy**2 * 1.3)
+    dist = np.sqrt(dx**2 * 0.6 + dy**2 * 1.4)
     dist = np.clip(dist, 0, 1.4)
     
-    # Center: (13, 22, 42) -> Edges: (6, 9, 18)
-    r = (13 - (13 - 6) * (dist / 1.4)).astype(np.uint8)
-    g = (22 - (22 - 9) * (dist / 1.4)).astype(np.uint8)
-    b = (42 - (42 - 18) * (dist / 1.4)).astype(np.uint8)
+    r = (12 - (12 - 5) * (dist / 1.4)).astype(np.uint8)
+    g = (20 - (20 - 8) * (dist / 1.4)).astype(np.uint8)
+    b = (38 - (38 - 16) * (dist / 1.4)).astype(np.uint8)
     
     base_arr = np.dstack([r, g, b, np.full((HEIGHT, WIDTH), 255, dtype=np.uint8)])
     base_img = Image.fromarray(base_arr, mode="RGBA")
@@ -70,31 +74,13 @@ def create_smooth_gradient_bg():
     gdraw = ImageDraw.Draw(grid_layer)
     grid_size = 40
     for gx in range(0, WIDTH, grid_size):
-        gdraw.line([(gx, 0), (gx, HEIGHT)], fill=(56, 189, 248, 12), width=1)
+        gdraw.line([(gx, 0), (gx, HEIGHT)], fill=(56, 189, 248, 10), width=1)
     for gy in range(0, HEIGHT, grid_size):
-        gdraw.line([(0, gy), (WIDTH, gy)], fill=(56, 189, 248, 12), width=1)
+        gdraw.line([(0, gy), (WIDTH, gy)], fill=(56, 189, 248, 10), width=1)
         
     return Image.alpha_composite(base_img, grid_layer)
 
 PRECOMPUTED_BG = create_smooth_gradient_bg()
-
-def draw_tracked_text(draw, font, text, center_x, center_y, fill, tracking=3):
-    chars = list(text)
-    widths = []
-    for ch in chars:
-        bbox = font.getbbox(ch)
-        widths.append(bbox[2] - bbox[0])
-    
-    total_w = sum(widths) + (len(chars) - 1) * tracking
-    bbox_sample = font.getbbox("A")
-    h = bbox_sample[3] - bbox_sample[1]
-    
-    cur_x = center_x - total_w / 2
-    y = center_y - h / 2
-    for i, ch in enumerate(chars):
-        draw.text((cur_x, y), ch, font=font, fill=fill)
-        cur_x += widths[i] + tracking
-    return total_w
 
 def render_frame(frame_idx):
     t = frame_idx / NUM_FRAMES
@@ -103,48 +89,18 @@ def render_frame(frame_idx):
     
     frame = PRECOMPUTED_BG.copy()
     
-    # 1. Ambient Glow Layer
+    # Ambient glows
     glow_layer = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
     gdraw = ImageDraw.Draw(glow_layer)
     
-    gdraw.ellipse([WIDTH//2 - 270, HEIGHT//2 - 75, WIDTH//2 + 270, HEIGHT//2 + 75],
-                  fill=(201, 169, 110, int(22 * pulse)))
-    gdraw.ellipse([40, 30, 350, HEIGHT - 30],
-                  fill=(56, 189, 248, int(18 * (1.1 - 0.2 * pulse))))
-    gdraw.ellipse([WIDTH - 350, 30, WIDTH - 40, HEIGHT - 30],
-                  fill=(56, 189, 248, int(18 * pulse)))
-    glow_layer = glow_layer.filter(ImageFilter.GaussianBlur(35))
+    # Warm gold backlight glow behind portrait
+    gdraw.ellipse([70, 35, 300, HEIGHT - 15], fill=(201, 169, 110, int(30 * pulse)))
+    # Cyan ambient glow on right
+    gdraw.ellipse([500, 50, 960, HEIGHT - 30], fill=(56, 189, 248, int(18 * (1.1 - 0.2 * pulse))))
+    glow_layer = glow_layer.filter(ImageFilter.GaussianBlur(38))
     frame = Image.alpha_composite(frame, glow_layer)
     
-    # 2. Orbital Ring & Satellite Beacon
-    orbit_layer = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
-    odraw = ImageDraw.Draw(orbit_layer)
-    orbit_cx, orbit_cy = WIDTH // 2, HEIGHT // 2
-    orbit_a, orbit_b = 430, 85
-    tilt = -0.08
-    
-    orbit_pts = []
-    for ang_deg in range(0, 360, 3):
-        ang = math.radians(ang_deg)
-        x0 = orbit_a * math.cos(ang)
-        y0 = orbit_b * math.sin(ang)
-        xr = x0 * math.cos(tilt) - y0 * math.sin(tilt) + orbit_cx
-        yr = x0 * math.sin(tilt) + y0 * math.cos(tilt) + orbit_cy
-        orbit_pts.append((xr, yr))
-        
-    odraw.line(orbit_pts + [orbit_pts[0]], fill=(201, 169, 110, 26), width=1)
-    
-    sat_ang = theta + math.pi / 4
-    sat_x0 = orbit_a * math.cos(sat_ang)
-    sat_y0 = orbit_b * math.sin(sat_ang)
-    sat_x = sat_x0 * math.cos(tilt) - sat_y0 * math.sin(tilt) + orbit_cx
-    sat_y = sat_x0 * math.sin(tilt) + sat_y0 * math.cos(tilt) + orbit_cy
-    
-    odraw.ellipse([sat_x - 7, sat_y - 7, sat_x + 7, sat_y + 7], fill=(56, 189, 248, 60))
-    odraw.ellipse([sat_x - 3, sat_y - 3, sat_x + 3, sat_y + 3], fill=(248, 250, 252, 230))
-    frame = Image.alpha_composite(frame, orbit_layer)
-    
-    # 3. Constellation Nodes & Connecting Filaments
+    # Constellation filaments
     net_layer = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
     ndraw = ImageDraw.Draw(net_layer)
     
@@ -160,133 +116,110 @@ def render_frame(frame_idx):
             x2, y2, c2, _ = current_nodes[j]
             dist = math.hypot(x2 - x1, y2 - y1)
             if dist < 120:
-                alpha = int(45 * (1 - dist / 120))
-                if c1 == "gold" or c2 == "gold":
-                    line_col = (201, 169, 110, alpha)
-                else:
-                    line_col = (56, 189, 248, alpha)
+                alpha = int(38 * (1 - dist / 120))
+                line_col = (201, 169, 110, alpha) if (c1 == "gold" or c2 == "gold") else (56, 189, 248, alpha)
                 ndraw.line([(x1, y1), (x2, y2)], fill=line_col, width=1)
                 
     for cur_x, cur_y, ctype, sz in current_nodes:
-        dist_to_center = math.hypot((cur_x - WIDTH/2)/1.4, cur_y - HEIGHT/2)
-        fade = min(1.0, max(0.15, (dist_to_center - 110) / 90))
+        # Avoid cluttering over text zone
+        in_title = (350 <= cur_x <= 960 and 85 <= cur_y <= 145)
+        fade = 0.15 if in_title else 1.0
         
         if ctype == "gold":
-            halo_col = (201, 169, 110, int(70 * fade))
-            core_col = (245, 230, 200, int(230 * fade))
+            halo_col = (201, 169, 110, int(60 * fade))
+            core_col = (245, 230, 200, int(220 * fade))
         elif ctype == "cyan":
-            halo_col = (56, 189, 248, int(75 * fade))
-            core_col = (248, 250, 252, int(240 * fade))
+            halo_col = (56, 189, 248, int(65 * fade))
+            core_col = (248, 250, 252, int(230 * fade))
         else:
-            halo_col = (30, 95, 130, int(50 * fade))
-            core_col = (56, 189, 248, int(180 * fade))
+            halo_col = (30, 95, 130, int(45 * fade))
+            core_col = (56, 189, 248, int(170 * fade))
             
         ndraw.ellipse([cur_x - sz - 2, cur_y - sz - 2, cur_x + sz + 2, cur_y + sz + 2], fill=halo_col)
         ndraw.ellipse([cur_x - sz, cur_y - sz, cur_x + sz, cur_y + sz], fill=core_col)
         
     frame = Image.alpha_composite(frame, net_layer)
     
-    # 4. Typography & Studio Badge
+    # Place portrait cleanly on left
+    port_x = 85
+    port_y = HEIGHT - ph + 4
+    frame.paste(portrait_scaled, (port_x, port_y), portrait_scaled)
+    
+    # Typography & Telemetry Layer
     ui_layer = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
     uidraw = ImageDraw.Draw(ui_layer)
     
-    # Pill badge: [ • AI SYSTEMS STUDIO ]
-    badge_text = "AI SYSTEMS STUDIO"
+    content_x = 345
+    
+    # Top Pill Badge
+    badge_text = "AI SYSTEMS & INTELLIGENCE ARCHITECTURE"
     bbox_b = FONT_BADGE.getbbox(badge_text)
     bw = bbox_b[2] - bbox_b[0]
     bh = bbox_b[3] - bbox_b[1]
     
-    pill_cx = WIDTH // 2
-    pill_cy = 46
-    pill_w = bw + 44
+    pill_y = 48
     pill_h = bh + 14
-    p_x1 = pill_cx - pill_w // 2
-    p_y1 = pill_cy - pill_h // 2
-    p_x2 = p_x1 + pill_w
-    p_y2 = p_y1 + pill_h
-    
-    uidraw.rounded_rectangle([p_x1, p_y1, p_x2, p_y2], radius=11,
-                            fill=(10, 18, 36, 210), outline=(201, 169, 110, 100), width=1)
+    pill_w = bw + 38
+    uidraw.rounded_rectangle([content_x, pill_y, content_x + pill_w, pill_y + pill_h], radius=10,
+                            fill=(10, 18, 36, 210), outline=(201, 169, 110, 90), width=1)
     
     dot_pulse = (math.sin(theta) + 1) / 2
-    dot_x = p_x1 + 14
-    dot_y = pill_cy
+    dot_x = content_x + 13
+    dot_y = pill_y + pill_h // 2
     uidraw.ellipse([dot_x - 5, dot_y - 5, dot_x + 5, dot_y + 5],
                    fill=(56, 189, 248, int(50 + 90 * dot_pulse)))
     uidraw.ellipse([dot_x - 2.5, dot_y - 2.5, dot_x + 2.5, dot_y + 2.5],
                    fill=(56, 189, 248, 255))
-    uidraw.text((p_x1 + 25, pill_cy - bh // 2 - 1), badge_text, font=FONT_BADGE, fill=(201, 169, 110, 240))
+    uidraw.text((content_x + 24, pill_y + 3), badge_text, font=FONT_BADGE, fill=(201, 169, 110, 240))
     
     # Main Title: JISON JOSEPH SEBASTIAN
     name_str = "JISON JOSEPH SEBASTIAN"
-    draw_tracked_text(uidraw, FONT_TITLE, name_str, WIDTH // 2, 106, (0, 0, 0, 190), tracking=4)
-    draw_tracked_text(uidraw, FONT_TITLE, name_str, WIDTH // 2, 105, (201, 169, 110, int(60 * pulse)), tracking=4)
-    draw_tracked_text(uidraw, FONT_TITLE, name_str, WIDTH // 2, 105, (248, 250, 252, 255), tracking=4)
+    name_y = 90
+    uidraw.text((content_x, name_y + 1), name_str, font=FONT_TITLE, fill=(0, 0, 0, 190))
+    uidraw.text((content_x, name_y), name_str, font=FONT_TITLE, fill=(201, 169, 110, int(50 * pulse)))
+    uidraw.text((content_x, name_y), name_str, font=FONT_TITLE, fill=(248, 250, 252, 255))
     
-    # Fine Divider Line with Sweeping Cyan Light
+    # Sweeping Divider Line
     div_y = 158
-    div_w = 440
-    div_x1 = (WIDTH - div_w) // 2
-    div_x2 = div_x1 + div_w
-    uidraw.line([(div_x1, div_y), (div_x2, div_y)], fill=(201, 169, 110, 50), width=1)
+    div_w = 680
+    uidraw.line([(content_x, div_y), (content_x + div_w, div_y)], fill=(201, 169, 110, 50), width=1)
     
-    beam_center = div_x1 + div_w * ((math.sin(theta) + 1) / 2)
-    beam_w = 45
-    b_start = max(div_x1, beam_center - beam_w)
-    b_end = min(div_x2, beam_center + beam_w)
-    uidraw.line([(b_start, div_y), (b_end, div_y)], fill=(56, 189, 248, 190), width=1)
-    uidraw.line([(max(div_x1, beam_center - 15), div_y), (min(div_x2, beam_center + 15), div_y)],
+    beam_center = content_x + div_w * ((math.sin(theta) + 1) / 2)
+    beam_w = 55
+    uidraw.line([(max(content_x, beam_center - beam_w), div_y),
+                 (min(content_x + div_w, beam_center + beam_w), div_y)],
+                fill=(56, 189, 248, 200), width=1)
+    uidraw.line([(max(content_x, beam_center - 15), div_y),
+                 (min(content_x + div_w, beam_center + 15), div_y)],
                 fill=(248, 250, 252, 255), width=1)
-    uidraw.polygon([(WIDTH//2, div_y - 3), (WIDTH//2 + 3, div_y),
-                    (WIDTH//2, div_y + 3), (WIDTH//2 - 3, div_y)],
-                   fill=(201, 169, 110, 230))
     
-    # Subtitle / Roles with custom gold bullets
-    r1 = "AI/ML Engineer"
-    r2 = "Agentic AI Developer"
-    r3 = "Full-Stack Developer"
+    # Roles
+    role_text = "AI/ML Engineer   ·   Agentic AI Developer   ·   Full-Stack Developer"
+    uidraw.text((content_x, 178), role_text, font=FONT_SUBTITLE, fill=(226, 232, 240, 240))
     
-    b1 = FONT_SUBTITLE.getbbox(r1)
-    w1 = b1[2] - b1[0]
-    b2 = FONT_SUBTITLE.getbbox(r2)
-    w2 = b2[2] - b2[0]
-    b3 = FONT_SUBTITLE.getbbox(r3)
-    w3 = b3[2] - b3[0]
-    
-    spacing = 26
-    bullet_size = 3
-    total_role_w = w1 + spacing + w2 + spacing + w3
-    start_rx = (WIDTH - total_role_w) // 2
-    role_y = 176
-    
-    uidraw.text((start_rx, role_y), r1, font=FONT_SUBTITLE, fill=(226, 232, 240, 240))
-    bx1 = start_rx + w1 + spacing // 2
-    by1 = role_y + 11
-    uidraw.ellipse([bx1 - bullet_size, by1 - bullet_size, bx1 + bullet_size, by1 + bullet_size],
-                   fill=(201, 169, 110, 220))
-    
-    tx2 = start_rx + w1 + spacing
-    uidraw.text((tx2, role_y), r2, font=FONT_SUBTITLE, fill=(226, 232, 240, 240))
-    bx2 = tx2 + w2 + spacing // 2
-    by2 = role_y + 11
-    uidraw.ellipse([bx2 - bullet_size, by2 - bullet_size, bx2 + bullet_size, by2 + bullet_size],
-                   fill=(201, 169, 110, 220))
-    
-    tx3 = tx2 + w2 + spacing
-    uidraw.text((tx3, role_y), r3, font=FONT_SUBTITLE, fill=(226, 232, 240, 240))
-    
-    # Bottom Meta line
-    meta_text = "RESEARCH & PRODUCTION AI   |   GATE 2026 QUALIFIED   |   SRISHTI 2026 BEST PROJECT AWARD"
-    bbox_m = FONT_META.getbbox(meta_text)
-    mw = bbox_m[2] - bbox_m[0]
-    meta_x = (WIDTH - mw) // 2
-    meta_y = 222
-    uidraw.text((meta_x, meta_y), meta_text, font=FONT_META, fill=(185, 200, 225, 210))
-    
-    # Outer Framing & Corners
+    # Credentials / Focus Badges
+    meta_badges = [
+        ("CS GRADUATE", (56, 189, 248)),
+        ("GATE QUALIFIED", (201, 169, 110)),
+        ("SRISHTI 2026 WINNER", (245, 230, 200)),
+        ("AGENTIC SYSTEMS", (148, 163, 184))
+    ]
+    mb_x = content_x
+    mb_y = 224
+    for label, col in meta_badges:
+        bbox = FONT_BADGE.getbbox(label)
+        lw = bbox[2] - bbox[0]
+        lh = bbox[3] - bbox[1]
+        pw_b = lw + 18
+        ph_b = lh + 10
+        uidraw.rounded_rectangle([mb_x, mb_y, mb_x + pw_b, mb_y + ph_b], radius=5,
+                                fill=(13, 22, 42, 190), outline=(col[0], col[1], col[2], 80), width=1)
+        uidraw.text((mb_x + 9, mb_y + 2), label, font=FONT_BADGE, fill=(col[0], col[1], col[2], 230))
+        mb_x += pw_b + 12
+
+    # Sleek Framing & Corner Accents
     uidraw.rectangle([1, 1, WIDTH - 2, HEIGHT - 2], outline=(201, 169, 110, 45), width=1)
     uidraw.rectangle([4, 4, WIDTH - 5, HEIGHT - 5], outline=(56, 189, 248, 20), width=1)
-    
     blen = 14
     for cx, cy, sx, sy in [(10, 10, 1, 1), (WIDTH - 11, 10, -1, 1),
                            (10, HEIGHT - 11, 1, -1), (WIDTH - 11, HEIGHT - 11, -1, -1)]:
@@ -296,18 +229,17 @@ def render_frame(frame_idx):
     frame = Image.alpha_composite(frame, ui_layer)
     return frame.convert("RGB")
 
-print(f"Rendering all {NUM_FRAMES} frames...")
+print(f"Rendering all {NUM_FRAMES} frames of master banner...")
 frames = []
 for i in range(NUM_FRAMES):
     f = render_frame(i)
-    # Quantize to 128 colors for optimal GIF size and crisp color
     f_p = f.quantize(colors=128, method=Image.Quantize.MEDIANCUT)
     frames.append(f_p)
     if (i + 1) % 10 == 0:
         print(f"Rendered {i + 1}/{NUM_FRAMES} frames")
 
 out_path = "assets/profile-banner.gif"
-print("Saving GIF to", out_path)
+print("Saving master GIF to", out_path)
 duration_ms = int(1000 / FPS)
 frames[0].save(
     out_path,
