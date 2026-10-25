@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <!-- Typing SVG -->
+  <!-- Typing SVG Subtitle -->
   <a href="https://jisonsebastian.vercel.app/">
     <img src="https://readme-typing-svg.demolab.com/?lines=AI%2FML+Engineer+%26+Researcher;Agentic+AI+%26+LLM+Workflows;Full-Stack+Software+Developer;Winner+Best+Project+Award+%40+SRISHTI'26;GATE+2026+Qualified+(CS%2FIT)&font=Fira+Code&center=true&width=560&height=45&color=D6B56D&vCenter=true&pause=1200&size=20" alt="Typing SVG" />
   </a>
@@ -23,13 +23,13 @@
 
 ---
 
-## ✦ I build practical software with AI at its core.
+<p align="left">
+  <img src="./assets/headers/about.svg" alt="Core Focus & Background" width="100%" />
+</p>
 
 Computer Science graduate from **Vimal Jyothi Engineering College**, working across machine learning, computer vision, LLM workflows, and modern web applications.
 
 My work bridges research-grade model development with production software: scalable pipelines, responsive user experiences, and deployment-ready workflows.
-
-### Core Focus Areas
 
 - 🧠 **Applied AI & Computer Vision** — Deep learning, CNN architectures, cross-age facial verification, and climate intelligence.
 - ⚡ **LLM Systems & Agent Workflows** — Autonomous workflows, retrieval-augmented generation (RAG), tool use, and evaluation pipelines.
@@ -37,51 +37,127 @@ My work bridges research-grade model development with production software: scala
 
 ---
 
-## ✦ Selected Work
+<p align="left">
+  <img src="./assets/headers/selected-works.svg" alt="Selected Works & Systems" width="100%" />
+</p>
 
-### 01 — [NeuroWave (CAIRS)](https://jisonsebastian.vercel.app/#projects)
-> **Climate-Aware Intelligent Radio System**  
-> *Recognized with the Best Project Award at SRISHTI 2026 National Level Technical Exhibition*
-
-A team-built intelligent system that fuses environmental sensing telemetry with AI-driven recommendations to dynamically optimize radio transmission profiles under severe meteorological conditions.
-
-- **Stack:** `Python` · `TensorFlow` · `IoT & Environmental Sensing` · `Climate AI`
-- **Key Outcome:** Winner of Best Project Award at SRISHTI 2026
-- **Links:** [Project Overview on Portfolio ↗](https://jisonsebastian.vercel.app/#projects)
+<!-- 2x2 Project Showcase Grid -->
+<table width="100%">
+  <tr>
+    <!-- 01: NeuroWave (CAIRS) -->
+    <td width="50%" valign="top">
+      <div align="left">
+        <a href="https://jisonsebastian.vercel.app/#projects">
+          <img src="https://img.shields.io/badge/01%20·%20AWARD%20WINNER-D6B56D?style=for-the-badge&labelColor=14181E" alt="01 Award Winner" />
+        </a>
+        <br/><br/>
+        <h3><a href="https://jisonsebastian.vercel.app/#projects">NeuroWave (CAIRS)</a></h3>
+        <p><b>Climate-Aware Intelligent Radio System</b><br/>
+        <sub>🏆 <i>Winner of Best Project Award at SRISHTI 2026</i></sub></p>
+        <p>Telemetry & deep learning architecture designed to dynamically adjust radio transmission frequencies and modulation based on real-time environmental atmospheric degradation.</p>
+        <p>
+          <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+          <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+          <img src="https://img.shields.io/badge/Climate%20AI-14181E?style=flat-square&logo=target&logoColor=D6B56D" />
+        </p>
+        <p>
+          <a href="https://jisonsebastian.vercel.app/#projects">
+            <img src="https://img.shields.io/badge/Case%20Study-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Case Study" />
+          </a>
+        </p>
+      </div>
+    </td>
+    <!-- 02: Sustain_AI -->
+    <td width="50%" valign="top">
+      <div align="left">
+        <a href="https://github.com/nosij-playz/Sustain_AI">
+          <img src="https://img.shields.io/badge/02%20·%20AGENTIC%20AI-D6B56D?style=for-the-badge&labelColor=14181E" alt="02 Agentic AI" />
+        </a>
+        <br/><br/>
+        <h3><a href="https://github.com/nosij-playz/Sustain_AI">Sustain_AI</a></h3>
+        <p><b>Environmental Analysis & Agentic Workflows</b><br/>
+        <sub>🌱 <i>Multi-Agent Intelligence & Computer Vision</i></sub></p>
+        <p>Autonomous environmental platform combining vision classifiers and agentic LLM reasoning pipelines to process telemetry data and formulate actionable sustainability audits.</p>
+        <p>
+          <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+          <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
+          <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=chainlink&logoColor=white" />
+        </p>
+        <p>
+          <a href="https://github.com/nosij-playz/Sustain_AI">
+            <img src="https://img.shields.io/badge/Source%20Code-14181E?style=flat-square&logo=github&logoColor=white" alt="Source" />
+          </a>
+          &nbsp;
+          <a href="https://jisonsebastian.vercel.app/#projects">
+            <img src="https://img.shields.io/badge/Overview-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Overview" />
+          </a>
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <!-- 03: Retrace AI -->
+    <td width="50%" valign="top">
+      <div align="left">
+        <a href="https://github.com/nosij-playz/Retrace-Ai">
+          <img src="https://img.shields.io/badge/03%20·%20COMPUTER%20VISION-D6B56D?style=for-the-badge&labelColor=14181E" alt="03 Computer Vision" />
+        </a>
+        <br/><br/>
+        <h3><a href="https://github.com/nosij-playz/Retrace-Ai">Retrace AI</a></h3>
+        <p><b>Age-Invariant Facial Recognition</b><br/>
+        <sub>🔍 <i>Deep Learning Feature Isolation</i></sub></p>
+        <p>Deep convolutional network engineered to overcome cross-age biometric degradation by isolating age-invariant facial landmarks and high-order latent features.</p>
+        <p>
+          <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+          <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" />
+          <img src="https://img.shields.io/badge/CNNs-14181E?style=flat-square&logoColor=D6B56D" />
+        </p>
+        <p>
+          <a href="https://github.com/nosij-playz/Retrace-Ai">
+            <img src="https://img.shields.io/badge/Source%20Code-14181E?style=flat-square&logo=github&logoColor=white" alt="Source" />
+          </a>
+          &nbsp;
+          <a href="https://jisonsebastian.vercel.app/#projects">
+            <img src="https://img.shields.io/badge/Overview-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Overview" />
+          </a>
+        </p>
+      </div>
+    </td>
+    <!-- 04: CureCart -->
+    <td width="50%" valign="top">
+      <div align="left">
+        <a href="https://github.com/nosij-playz/Curecart">
+          <img src="https://img.shields.io/badge/04%20·%20FULL%20STACK-D6B56D?style=for-the-badge&labelColor=14181E" alt="04 Full Stack" />
+        </a>
+        <br/><br/>
+        <h3><a href="https://github.com/nosij-playz/Curecart">CureCart</a></h3>
+        <p><b>Medical Inventory & Ordering System</b><br/>
+        <sub>💊 <i>Full-Stack Healthcare Web App</i></sub></p>
+        <p>End-to-end pharmacy management platform featuring live inventory tracking, automatic prescription ledger reconciliation, and secure medicine purchasing checkout.</p>
+        <p>
+          <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+          <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" />
+        </p>
+        <p>
+          <a href="https://github.com/nosij-playz/Curecart">
+            <img src="https://img.shields.io/badge/Source%20Code-14181E?style=flat-square&logo=github&logoColor=white" alt="Source" />
+          </a>
+          &nbsp;
+          <a href="https://jisonsebastian.vercel.app/#projects">
+            <img src="https://img.shields.io/badge/Overview-D6B56D?style=flat-square&logo=safari&logoColor=0B0D10" alt="Overview" />
+          </a>
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### 02 — [Sustain_AI](https://github.com/nosij-playz/Sustain_AI)
-> **Environmental Analysis with Agentic AI**
-
-An autonomous environmental intelligence platform utilizing specialized agent workflows, computer vision models, and LLM reasoning to evaluate environmental indicators and generate actionable sustainability insights.
-
-- **Stack:** `Python` · `Flask` · `LLMs & LangChain` · `Computer Vision`
-- **Links:** [Source Code ↗](https://github.com/nosij-playz/Sustain_AI) · [Portfolio Overview ↗](https://jisonsebastian.vercel.app/#projects)
-
----
-
-### 03 — [Retrace AI](https://github.com/nosij-playz/Retrace-Ai)
-> **Age-Invariant Facial Recognition & Verification**
-
-A deep learning project engineered to tackle cross-age facial verification challenges by isolating invariant facial features across progressive aging stages using custom convolutional networks.
-
-- **Stack:** `PyTorch` · `OpenCV` · `CNN Architectures` · `Python`
-- **Links:** [Source Code ↗](https://github.com/nosij-playz/Retrace-Ai) · [Portfolio Overview ↗](https://jisonsebastian.vercel.app/#projects)
-
----
-
-### 04 — [CureCart](https://github.com/nosij-playz/Curecart)
-> **Medicine Ordering & Medical Inventory Management System**
-
-A full-stack pharmaceutical e-commerce and inventory management application providing automated stock tracking, prescription management, and streamlined checkout workflows.
-
-- **Stack:** `Python` · `Flask` · `JavaScript` · `SQLite` · `REST API`
-- **Links:** [Source Code ↗](https://github.com/nosij-playz/Curecart) · [Portfolio Overview ↗](https://jisonsebastian.vercel.app/#projects)
-
----
-
-## ✦ Technical Toolkit
+<p align="left">
+  <img src="./assets/headers/technical-toolkit.svg" alt="Technical Toolkit & Skills" width="100%" />
+</p>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,opencv,scikitlearn,fastapi,flask,react,nodejs,tailwind,postgres,mysql,mongodb,docker,git,linux&theme=dark&perline=8" alt="Tech Stack Icons" />
@@ -96,7 +172,9 @@ A full-stack pharmaceutical e-commerce and inventory management application prov
 
 ---
 
-## ✦ GitHub Analytics & Streak
+<p align="left">
+  <img src="./assets/headers/github-analytics.svg" alt="GitHub Analytics & Activity" width="100%" />
+</p>
 
 <p align="center">
   <a href="https://github.com/nosij-playz">
@@ -112,7 +190,6 @@ A full-stack pharmaceutical e-commerce and inventory management application prov
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nosij-playz&layout=compact&title_color=D6B56D&text_color=F5F3EE&bg_color=0B0D10&border_color=2B3038&hide_border=false" alt="Top Languages" height="150" />
 </p>
 
-### Contribution Activity
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nosij-playz/nosij-playz/output/github-contribution-grid-snake-dark.svg">
@@ -123,7 +200,9 @@ A full-stack pharmaceutical e-commerce and inventory management application prov
 
 ---
 
-## ✦ Recognition & Credentials
+<p align="left">
+  <img src="./assets/headers/recognition.svg" alt="Honors & Recognition" width="100%" />
+</p>
 
 - 🏆 **Best Project Award — SRISHTI 2026**  
   National Level Technical Project Exhibition for *NeuroWave (CAIRS)*
@@ -135,6 +214,10 @@ A full-stack pharmaceutical e-commerce and inventory management application prov
   Spanning agentic systems, computer vision research, and production web tools
 
 ---
+
+<p align="left">
+  <img src="./assets/headers/connect.svg" alt="Collaborate & Connect" width="100%" />
+</p>
 
 <p align="center">
   <h3>Let’s build something impactful together.</h3>

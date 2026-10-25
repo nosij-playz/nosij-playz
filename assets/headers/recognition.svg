@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 64" width="100%" height="auto" fill="none">
+  <defs>
+    <linearGradient id="goldTextGrad_AWARDS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D6B56D" />
+      <stop offset="60%" stop-color="#F5E4B8" />
+      <stop offset="100%" stop-color="#D6B56D" />
+    </linearGradient>
+    <linearGradient id="goldBarGrad_AWARDS" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E5C77F" />
+      <stop offset="100%" stop-color="#B89445" />
+    </linearGradient>
+    <filter id="subtleGlow_AWARDS" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#D6B56D" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Left Accent Pill -->
+  <rect x="0" y="16" width="6" height="32" rx="3" fill="url(#goldBarGrad_AWARDS)" filter="url(#subtleGlow_AWARDS)" />
+  
+  <!-- Section Title -->
+  <text x="24" y="39" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" 
+        font-size="22" 
+        font-weight="800" 
+        letter-spacing="2" 
+        fill="url(#goldTextGrad_AWARDS)">HONORS & RECOGNITION</text>
+        
+  <!-- Trailing Border Accent -->
+  <line x1="345" y1="34" x2="790" y2="34" stroke="#2B3038" stroke-width="1.5" stroke-dasharray="4 4" />
+  <circle cx="795" cy="34" r="2.5" fill="#D6B56D" opacity="0.8" />
+</svg>
