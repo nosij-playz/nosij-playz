@@ -43,26 +43,27 @@ for y in range(ph - fade_len, ph):
 portrait_dark = portrait_scaled.copy()
 portrait_dark.putalpha(fade_mask)
 
-# Rich Constellation Particle Distribution across the canvas
+# STRICT PHOTO EXCLUSION:
+# Portrait is positioned at port_x = 85 * SCALE, width = pw (~166 * SCALE) -> ends at ~251 * SCALE.
+# All nodes are strictly placed to the RIGHT of the photo (bx >= 330 * SCALE).
+# Absolutely ZERO particles will enter or overlap the photo zone.
 np.random.seed(42)
-NUM_NODES = 34
+NUM_NODES = 32
 node_bases = []
 for i in range(NUM_NODES):
-    # Well-spread across canvas
-    if i < 10:
-        bx = np.random.uniform(30 * SCALE, 320 * SCALE)
-    elif i < 22:
-        bx = np.random.uniform(700 * SCALE, (BASE_W - 35) * SCALE)
+    # All nodes distributed across the right 70% of the canvas
+    if i < 16:
+        bx = np.random.uniform(340 * SCALE, 720 * SCALE)
     else:
-        bx = np.random.uniform(320 * SCALE, 700 * SCALE)
+        bx = np.random.uniform(700 * SCALE, (BASE_W - 35) * SCALE)
         
     by = np.random.uniform(25 * SCALE, (BASE_H - 25) * SCALE)
-    rx = np.random.uniform(7 * SCALE, 16 * SCALE)
-    ry = np.random.uniform(6 * SCALE, 14 * SCALE)
+    rx = np.random.uniform(6 * SCALE, 14 * SCALE)
+    ry = np.random.uniform(5 * SCALE, 12 * SCALE)
     phase = np.random.uniform(0, 2 * math.pi)
     speed = np.random.choice([1, 2])
-    color_type = np.random.choice(["gold", "cyan", "gold_dim"], p=[0.50, 0.35, 0.15])
-    size = np.random.uniform(2.0 * SCALE, 3.6 * SCALE)
+    color_type = np.random.choice(["gold", "cyan", "gold_dim"], p=[0.55, 0.30, 0.15])
+    size = np.random.uniform(2.0 * SCALE, 3.4 * SCALE)
     node_bases.append({
         "bx": bx, "by": by, "rx": rx, "ry": ry,
         "phase": phase, "speed": speed, "color_type": color_type, "size": size
@@ -89,8 +90,10 @@ def render_frame_2x(frame_idx):
     # 2. Ambient Glows
     glow_layer = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
     glow_draw = ImageDraw.Draw(glow_layer)
+    # Warm gold glow behind portrait
     glow_draw.ellipse([70 * SCALE, 35 * SCALE, 320 * SCALE, HEIGHT - 15 * SCALE],
                       fill=(GOLD[0], GOLD[1], GOLD[2], int(32 * pulse)))
+    # Ambient glows on right
     glow_draw.ellipse([450 * SCALE, 45 * SCALE, 980 * SCALE, HEIGHT - 25 * SCALE],
                       fill=(56, 189, 248, int(18 * (1.1 - 0.2 * pulse))))
     glow_draw.ellipse([750 * SCALE, 30 * SCALE, WIDTH - 30 * SCALE, HEIGHT - 20 * SCALE],
@@ -98,13 +101,16 @@ def render_frame_2x(frame_idx):
     glow_layer = glow_layer.filter(ImageFilter.GaussianBlur(38 * SCALE))
     base = Image.alpha_composite(base, glow_layer)
     
-    # 3. Rich Constellation Filaments & Particles
+    # 3. Constellation Filaments & Particles (Only in x >= 320 * SCALE)
     net_layer = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
     ndraw = ImageDraw.Draw(net_layer)
     current_nodes = []
     for node in node_bases:
         cur_x = node["bx"] + node["rx"] * math.cos(theta * node["speed"] + node["phase"])
         cur_y = node["by"] + node["ry"] * math.sin(theta * node["speed"] + node["phase"])
+        # Strict boundary clamp: Never allow particle past x = 320 * SCALE
+        if cur_x < 320 * SCALE:
+            cur_x = 320 * SCALE
         current_nodes.append((cur_x, cur_y, node["color_type"], node["size"]))
         
     for i in range(len(current_nodes)):
@@ -119,7 +125,7 @@ def render_frame_2x(frame_idx):
                 ndraw.line([(x1, y1), (x2, y2)], fill=line_col, width=1 * SCALE)
                 
     for cur_x, cur_y, ctype, sz in current_nodes:
-        # Distance fade near center title line for readability while keeping particles visible
+        # Distance intensity near title for contrast
         in_title_bar = (350 * SCALE <= cur_x <= 980 * SCALE and 88 * SCALE <= cur_y <= 145 * SCALE)
         intensity = 0.25 if in_title_bar else 1.0
         
@@ -136,9 +142,15 @@ def render_frame_2x(frame_idx):
         ndraw.ellipse([cur_x - sz - 2*SCALE, cur_y - sz - 2*SCALE, cur_x + sz + 2*SCALE, cur_y + sz + 2*SCALE], fill=halo_col)
         ndraw.ellipse([cur_x - sz, cur_y - sz, cur_x + sz, cur_y + sz], fill=core_col)
         
+    # Hard clip net_layer so x < 315 * SCALE is 100% transparent (no lines or halos reach photo)
+    clip_mask = Image.new("L", (WIDTH, HEIGHT), 255)
+    cdraw = ImageDraw.Draw(clip_mask)
+    cdraw.rectangle([0, 0, int(315 * SCALE), HEIGHT], fill=0)
+    net_layer.putalpha(ImageMath.eval("convert(a * (b / 255.0), 'L')", a=net_layer.split()[3], b=clip_mask) if False else Image.composite(net_layer.split()[3], Image.new("L", (WIDTH, HEIGHT), 0), clip_mask))
+    
     base = Image.alpha_composite(base, net_layer)
     
-    # 4. Portrait
+    # 4. Portrait (Pastes cleanly with 0 particles anywhere near or on it)
     port_x = 85 * SCALE
     port_y = HEIGHT - ph + 4 * SCALE
     base.paste(portrait_dark, (port_x, port_y), portrait_dark)
@@ -175,7 +187,7 @@ def render_frame_2x(frame_idx):
     name_str = "JISON JOSEPH SEBASTIAN"
     name_y = int(88 * SCALE)
     
-    # High-contrast shadow behind typography for separation from animated particles
+    # High-contrast shadow behind typography for separation
     uidraw.text((content_x + 2*SCALE, name_y + 2*SCALE), name_str, font=FONT_TITLE, fill=(0, 0, 0, 230))
     uidraw.text((content_x, name_y), name_str, font=FONT_TITLE, fill=(GOLD[0], GOLD[1], GOLD[2], int(45 * pulse)))
     uidraw.text((content_x, name_y), name_str, font=FONT_TITLE, fill=TEXT_WHITE + (255,))
@@ -238,7 +250,7 @@ def render_frame_2x(frame_idx):
     final_frame = frame.resize((BASE_W, BASE_H), Image.Resampling.LANCZOS)
     return final_frame.convert("RGB")
 
-print("Rendering full master frames with restored rich constellation particles & 2X supersampling...")
+print("Rendering master banner with STRICT photo exclusion zone...")
 frames = []
 for i in range(NUM_FRAMES):
     f = render_frame_2x(i)
@@ -248,7 +260,7 @@ for i in range(NUM_FRAMES):
         print(f"Rendered {i + 1}/{NUM_FRAMES} frames")
 
 out_path = "assets/profile-banner.gif"
-print("Saving restored master GIF to", out_path)
+print("Saving clean GIF to", out_path)
 duration_ms = int(1000 / FPS)
 frames[0].save(
     out_path,
